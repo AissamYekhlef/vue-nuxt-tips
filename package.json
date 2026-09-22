@@ -5,11 +5,8 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "dev:t": "slidev",
-    "--comment-just-example": "pnpm dev:t -- vue-slides.md --port 3030 --open",
-    "dev:target": "cross-env-shell 'slidev $DECK --open'",
-    "dev:vue": "slidev --open vue-slides.md",
-    "export": "slidev export"
+    "export": "slidev export",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@slidev/cli": "^53.0.0",
