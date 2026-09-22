@@ -17,6 +17,15 @@ mdc: true
 duration: 35min
 lineNumbers: false
 hideInToc: true
+seoMeta:
+  ogTitle: Vue, Nuxt & TypeScript Tips
+  ogDescription: Practical Vue, Nuxt and TypeScript tips for modern web development.
+  ogImage: https://aissamyekhlef.github.io/vue-nuxt-tips/og-image.png
+  ogUrl: https://aissamyekhlef.github.io/vue-nuxt-tips/
+  twitterCard: summary_large_image
+  twitterTitle: Vue, Nuxt & TypeScript Tips
+  twitterDescription: Practical Vue, Nuxt and TypeScript tips for modern web development.
+  twitterImage: https://aissamyekhlef.github.io/vue-nuxt-tips/og-image.png
 ---
 
 # Vue & Nuxt Tips
