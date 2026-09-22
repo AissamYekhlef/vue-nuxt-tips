@@ -47,7 +47,7 @@ layout: default
 <div class="grid grid-cols-3 gap-4 mt-6 text-sm">
 <div>
 
-### <span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-purple-500/15 text-purple-400">vite</span>
+### <tag name="vite" />
 
 - 01 · `?raw` imports
 - 29 · TS import alias
@@ -56,7 +56,7 @@ layout: default
 </div>
 <div>
 
-### <span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+### <tag name="vue" />
 
 36 tips covering reactivity, components, styling,
 composables and DX — see full list below.
@@ -64,7 +64,7 @@ composables and DX — see full list below.
 </div>
 <div>
 
-### <span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+### <tag name="nuxt" />
 
 - 06 · `shared/`
 - 07 · `NuxtLink` prefetch
@@ -94,7 +94,7 @@ Vite imports & core reactivity
 
 # 01 · Import a file as text with `?raw`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-purple-500/15 text-purple-400">vite</span>
+<tag name="vite" />
 
 Vite can import a file's contents directly as a string. This is useful
 for displaying source code or loading text-based assets.
@@ -113,7 +113,7 @@ For an asset URL, use `?url` instead.
 
 # 02 · Accept a value, ref, or getter in one composable
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `toValue()` supports plain values, refs, and getter functions. Use it
 inside a reactive computation when you want changes to remain tracked.
@@ -131,7 +131,7 @@ export function useGreeting(name: MaybeRefOrGetter<string>) {
 
 # 03 · Pause a watcher during a batch update
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue 3.5+ watchers expose `pause()`, `resume()`, and `stop()`. This is
 useful when several changes should not trigger the watcher
@@ -158,7 +158,7 @@ function resetFilters() {
 
 # 04 · Run a watcher only once
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue 3.4+ supports `once: true`, which automatically stops a watcher
 after its first callback.
@@ -173,7 +173,7 @@ watch(hasEdited, () => {
 
 # 05 · Limit deep watcher traversal for arrays
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 In Vue 3.5+, numeric `deep` values let you control how far Vue traverses
 nested structures. `deep: 1` can observe array-level changes without
@@ -196,7 +196,7 @@ Nuxt structure & watcher cleanup
 
 # 06 · Share utilities and types through `shared/`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt 3.14+ provides a `shared/` directory for code that can be used from
 both server and client contexts.
@@ -227,7 +227,7 @@ export function formatCurrency(amount: number, currency = 'USD') {
 
 # 07 · Control when `NuxtLink` prefetches
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt 3.13+ allows link prefetching to be configured around viewport
 visibility and user interaction.
@@ -253,7 +253,7 @@ You can also configure defaults in `nuxt.config.ts`.
 
 # 08 · Organize routes with route groups
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt 3.13+ supports parenthesized route groups. The folders organize
 your source tree without becoming part of the URL.
@@ -274,7 +274,7 @@ pages/
 
 # 09 · Use preview mode for draft content
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt's `usePreviewMode()` can expose preview state for draft content.
 
@@ -297,7 +297,7 @@ The composable can also be customized with `shouldEnable` and
 
 # 10 · Lazy-hydrate async components
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue 3.5+ provides hydration strategies for async components. Hydration
 can happen when an element becomes visible, when the browser is idle, or
@@ -329,7 +329,7 @@ const Dropdown = defineAsyncComponent({
 
 # 11 · Defer a `<Teleport>` target
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue 3.5+ supports `defer`, allowing a teleport target rendered later in
 the same render cycle.
@@ -346,7 +346,7 @@ the same render cycle.
 
 # 12 · Clean up stale watcher work
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `onWatcherCleanup()` is useful for cancelling asynchronous work started
 by a watcher, such as an obsolete API request.
@@ -378,7 +378,7 @@ Refs, props, slots & scoped styles
 
 # 13 · Generate stable unique IDs with `useId()`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue 3.5+ includes `useId()`, which creates IDs that remain consistent
 between server and client rendering.
@@ -402,7 +402,7 @@ This is particularly useful for accessible form controls.
 
 # 14 · Use `useTemplateRef()` for template refs
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue 3.5+ provides `useTemplateRef()` so the JavaScript variable does not
 have to match the template ref name.
@@ -427,7 +427,7 @@ onMounted(() => {
 
 # 15 · Use reactive destructured prop defaults
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue 3.5+ supports native destructuring with defaults while retaining
 reactive prop behavior.
@@ -448,7 +448,7 @@ This can replace many `withDefaults()` use cases.
 
 # 16 · Use `defineModel()` for two-way binding
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue 3.4+ provides `defineModel()` as a concise way to implement
 component `v-model`.
@@ -470,7 +470,7 @@ the common case.
 
 # 17 · Don't make everything reactive
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Only use `ref()` or another reactive API when the value actually needs
 to participate in Vue's reactivity system.
@@ -493,7 +493,7 @@ const tabs = ref([
 
 # 18 · Use same-name `v-bind` shorthand
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue 3.4+ allows a shorter form when the attribute name and JavaScript
 variable name are identical.
@@ -510,7 +510,7 @@ variable name are identical.
 
 # 19 · Use `shallowRef()` for large objects
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `shallowRef()` tracks replacement of the `.value`, but does not make
 nested properties reactive.
@@ -529,7 +529,7 @@ state.value = { count: 2 }
 
 # 20 · Type component emits with TypeScript
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Typed emits improve editor support and catch incorrect event payloads.
 
@@ -544,7 +544,7 @@ const emit = defineEmits<{
 
 # 21 · Bind reactive values directly from CSS
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue's `v-bind()` can expose component state to a `<style>` block.
 
@@ -569,7 +569,7 @@ Data fetching & directives
 
 # 22 · Manage request state with TanStack Vue Query
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 TanStack Vue Query can handle fetching, loading/error states, caching,
 and query identity.
@@ -601,7 +601,7 @@ const {
 
 # 23 · Apply one global selector inside scoped styles
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Use `:global()` when a single rule needs to escape scoped-style
 behavior.
@@ -618,7 +618,7 @@ behavior.
 
 # 24 · Reduce font-related layout shift with Fontaine
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 The Nuxt Fontaine module can generate local font fallbacks to reduce
 cumulative layout shift.
@@ -637,7 +637,7 @@ export default defineNuxtConfig({
 
 # 25 · Provide defaults for type-only props
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `withDefaults()` lets TypeScript-based `defineProps()` declarations have
 runtime defaults.
@@ -658,7 +658,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 # 26 · Search Nuxt Content collections
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt Content v3 exposes `queryCollectionSearchSections()` for obtaining
 searchable sections.
@@ -670,7 +670,6 @@ const { data: sections } = await useAsyncData(
   'content-search',
   () => queryCollectionSearchSections('content')
 )
-
 const results = computed(() => {
   const query = search.value.trim().toLowerCase()
 
@@ -691,7 +690,7 @@ all searchable sections to the browser.
 
 # 27 · Get previous and next Nuxt Content entries
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 `queryCollectionItemSurroundings()` can retrieve the entries immediately
 before and after the current document.
@@ -713,7 +712,7 @@ page has only one neighbor.
 
 # 28 · Define a local custom directive
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Inside `<script setup>`, an object beginning with `v` can be used as a
 local directive.
@@ -741,7 +740,7 @@ Tooling, SEO feeds & scoped CSS
 
 # 29 · Configure a Vite + TypeScript import alias
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-purple-500/15 text-purple-400">vite</span>
+<tag name="vite" />
 
 The alias needs to be known by both Vite and TypeScript.
 
@@ -760,7 +759,9 @@ export default defineConfig({
   }
 })
 ```
+---
 
+ 
 Then add the matching TypeScript path:
 
 ```json
@@ -774,10 +775,11 @@ Then add the matching TypeScript path:
 ```
 
 ---
+---
 
 # 30 · Add Nuxt Content pages to a sitemap
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt Sitemap can consume a server endpoint that returns page paths from
 Nuxt Content.
@@ -808,7 +810,7 @@ Only expose public pages, and use real modification dates when supplying
 
 # 31 · Generate an RSS feed from Nuxt Content
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 A server route can query Nuxt Content and build an RSS document.
 
@@ -816,6 +818,8 @@ A server route can query Nuxt Content and build an RSS document.
 npm install rss
 npm install -D @types/rss
 ```
+---
+
 
 ```ts {monaco}
 // server/routes/rss.xml.get.ts
@@ -854,7 +858,7 @@ export default defineEventHandler(async event => {
 
 # 32 · Reach child component elements with `:deep()`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Scoped CSS normally stops at component boundaries. `:deep()` lets a
 scoped selector target nested child markup.
@@ -871,7 +875,7 @@ scoped selector target nested child markup.
 
 # 33 · Style slot content with `:slotted()`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Use `:slotted()` when scoped CSS needs to target content supplied
 through a slot.
@@ -888,7 +892,7 @@ through a slot.
 
 # 34 · Preserve component state with `<KeepAlive>`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Dynamic components normally unmount when replaced. `<KeepAlive>` caches
 component instances so their local state can survive switching.
@@ -903,7 +907,7 @@ component instances so their local state can survive switching.
 
 # 35 · Use multiple named slots
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Named slots let a reusable component expose multiple insertion points.
 
@@ -938,7 +942,7 @@ Named slots let a reusable component expose multiple insertion points.
 
 # 36 · Coordinate async dependencies with `<Suspense>`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `<Suspense>` can display a fallback while nested async dependencies
 resolve.
@@ -960,7 +964,7 @@ and API details.
 
 # 37 · Render server-only components with Nuxt Islands
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt Islands can keep component JavaScript on the server for components
 that do not need client-side interactivity.
@@ -993,7 +997,7 @@ Teleport, DX & v-model modifiers
 
 # 38 · Teleport UI outside the component hierarchy
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `<Teleport>` is useful for modals, overlays, menus, and similar UI that
 needs to render elsewhere in the DOM.
@@ -1011,7 +1015,7 @@ needs to render elsewhere in the DOM.
 
 # 39 · Enable Vue performance tracing in development
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue can expose component performance information to browser development
 tools.
@@ -1031,7 +1035,7 @@ optimization.
 
 # 40 · Store component definitions in `shallowRef()`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `shallowRef()` is appropriate for reactive references to component
 definitions.
@@ -1065,7 +1069,7 @@ pattern with `<KeepAlive>`.
 
 # 41 · Run code once with `callOnce()`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt's `callOnce()` is useful for initialization that should execute
 once in the relevant rendering/navigation lifecycle.
@@ -1082,7 +1086,7 @@ await callOnce(async () => {
 
 # 42 · Shorten boolean props
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 A boolean prop whose value is explicitly `true` can use attribute
 shorthand.
@@ -1099,7 +1103,7 @@ shorthand.
 
 # 43 · Use the `.lazy` `v-model` modifier
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `.lazy` updates the model on `change` rather than on every `input`
 event.
@@ -1112,7 +1116,7 @@ event.
 
 # 44 · Convert input values to numbers
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `.number` asks Vue to convert compatible input values to numbers.
 
@@ -1124,11 +1128,11 @@ event.
 
 # 45 · Trim input whitespace automatically
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 `.trim` removes surrounding whitespace from text input values.
 
-```vue
+```html
 <input v-model.trim="message">
 ```
 
@@ -1143,7 +1147,7 @@ Dev server, exposing state & final polish
 
 # 46 · Expose a Nuxt dev server through a tunnel
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="vue" />
 
 Nuxt can start its development server with tunneling enabled.
 
@@ -1158,7 +1162,7 @@ environment.
 
 # 47 · Run the Nuxt development server over HTTPS
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt supports starting the development server with HTTPS and a
 self-signed certificate.
@@ -1171,7 +1175,7 @@ npx nuxt dev --https
 
 # 48 · Expose values from `<script setup>`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Components using `<script setup>` are closed by default.
 `defineExpose()` explicitly makes selected values accessible through a
@@ -1193,7 +1197,7 @@ defineExpose({
 
 # 49 · Refresh a cookie value with `refreshCookie()`
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-teal-500/15 text-teal-400">nuxt</span>
+<tag name="nuxt" />
 
 Nuxt 3.10+ provides `refreshCookie()` for cases where a cookie has
 changed outside the current `useCookie()` state.
@@ -1212,7 +1216,7 @@ async function login() {
 
 # 50 · Parent and child component classes are merged
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 When a component renders a single root element, classes passed by the
 parent are merged with classes declared on the child root.
@@ -1239,7 +1243,7 @@ The rendered element receives both sets of classes.
 
 # 51 · Use Lightning CSS for CSS transformation
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-purple-500/15 text-purple-400">vite</span>
+<tag name="vite" />
 
 Lightning CSS can be used by Vite for CSS transformation and
 minification.
@@ -1247,6 +1251,7 @@ minification.
 ```bash
 npm install -D lightningcss browserslist
 ```
+---
 
 ```ts {monaco}
 // vite.config.ts
@@ -1268,14 +1273,13 @@ export default defineConfig({
   }
 })
 ```
-
 Adjust the browser query to match your project's supported browsers.
 
 ---
 
 # 52 · Enable custom formatters for Vue reactivity in DevTools
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 Vue's reactive values can be easier to inspect in Chromium DevTools when
 custom formatters are enabled.
@@ -1290,7 +1294,7 @@ Console → Enable custom formatters
 
 # 53 · Use Vue DevTools for Vue applications
 
-<span class="text-xs font-semibold tracking-wide px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400">vue</span>
+<tag name="vue" />
 
 If you want a Vue-focused developer-tools experience similar to Nuxt
 DevTools, see the Vue DevTools Next project:
