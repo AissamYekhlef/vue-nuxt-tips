@@ -792,7 +792,7 @@ npm install -D @types/rss
 ---
 
 
-```ts {monaco}
+```ts
 // server/routes/rss.xml.get.ts
 import RSS from 'rss'
 import { queryCollection } from '@nuxt/content/server'
@@ -1226,7 +1226,7 @@ npm install -D lightningcss browserslist
 ```
 ---
 
-```ts {monaco}
+```ts
 // vite.config.ts
 import { defineConfig } from 'vite'
 import browserslist from 'browserslist'
