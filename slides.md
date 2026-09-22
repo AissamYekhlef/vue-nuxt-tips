@@ -1,10 +1,10 @@
 ---
 theme: seriph
-background: https://cover.sli.dev
+background: cover-background.svg
 title: Vue & Nuxt Tips
 info: |
   ## Vue & Nuxt Tips
-  A practical Markdown reference based on 53 tips for Vue.js, Nuxt.js
+  Tips for Vue.js, Nuxt.js
   and Vite developers.
 
   Learn more at [Sli.dev](https://sli.dev)
@@ -16,22 +16,24 @@ comark: true
 mdc: true
 duration: 35min
 lineNumbers: false
+hideInToc: true
 ---
 
 # Vue & Nuxt Tips
 
-53 practical tips for Vite, Vue and Nuxt developers
+practical tips for Vite, Vue and Nuxt developers
 
 <div class="pt-8 opacity-70 text-sm">
-Structured after the numbered tip/category format on
-<a href="https://vuejstips.com/" target="_blank">Vue.js Tips</a>
+  Eng.
+  <a href="https://aissamyekhlef.github.io/" target="_blank">Aissam Yekhlef</a>
 </div>
 
-<div class="abs-br m-6 flex gap-2">
+<!-- <div class="abs-br m-6 flex gap-2">
+Credits:
   <a href="https://vuejstips.com/" target="_blank" class="text-xl opacity-50 hover:opacity-100">
     vuejstips.com
   </a>
-</div>
+</div> -->
 
 <!--
 Personal reference deck. Descriptions and code examples are rewritten
@@ -40,51 +42,16 @@ from the source site's numbered tip format.
 
 ---
 layout: default
+hideInToc: true
 ---
 
 # Agenda
 
-<div class="grid grid-cols-3 gap-4 mt-6 text-sm">
-<div>
-
-### <tag name="vite" />
-
-- 01 · `?raw` imports
-- 29 · TS import alias
-- 51 · Lightning CSS
-
-</div>
-<div>
-
-### <tag name="vue" />
-
-36 tips covering reactivity, components, styling,
-composables and DX — see full list below.
-
-</div>
-<div>
-
-### <tag name="nuxt" />
-
-- 06 · `shared/`
-- 07 · `NuxtLink` prefetch
-- 08 · route groups
-- 09 · preview mode
-- 24 · Fontaine
-- 26–27 · Content queries
-- 30–31 · sitemap / RSS
-- 37 · Islands
-- 41 · `callOnce()`
-- 46–47 · dev server
-- 49 · `refreshCookie()`
-
-</div>
-</div>
-
-<Toc columns="3" maxDepth="1" class="mt-8 text-xs" />
+<Toc columns="3" maxDepth="3" class="text-xs"  />
 
 ---
 layout: section
+hideInToc: true
 ---
 
 # 01 – 05
@@ -187,6 +154,7 @@ watch(items, () => {
 
 ---
 layout: section
+hideInToc: true
 ---
 
 # 06 – 12
@@ -369,6 +337,7 @@ The same pattern can be used with `watchEffect()`.
 
 ---
 layout: section
+hideInToc: true
 ---
 
 # 13 – 21
@@ -560,6 +529,7 @@ When `backgroundColor` changes, the generated CSS variable is updated.
 
 ---
 layout: section
+hideInToc: true
 ---
 
 # 22 – 28
@@ -731,6 +701,7 @@ const vFocus = {
 
 ---
 layout: section
+hideInToc: true
 ---
 
 # 29 – 37
@@ -988,6 +959,7 @@ with `NuxtIsland`.
 
 ---
 layout: section
+hideInToc: true
 ---
 
 # 38 – 45
@@ -1138,6 +1110,7 @@ event.
 
 ---
 layout: section
+hideInToc: true
 ---
 
 # 46 – 53
