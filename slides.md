@@ -235,17 +235,43 @@ You can also configure defaults in `nuxt.config.ts`.
 Nuxt 3.13+ supports parenthesized route groups. The folders organize
 your source tree without becoming part of the URL.
 
-```text
-pages/
-  (marketing)/
-    about.vue       → /about
-    contact.vue     → /contact
-  (shop)/
-    products.vue    → /products
-    cart.vue        → /cart
-  (auth)/
-    login.vue       → /login
-```
+<Row>
+  <template #left>
+
+  ### before
+
+  ```text
+  pages/
+    marketing/
+      about.vue       → /marketing/about
+      contact.vue     → /marketing/contact
+    shop/
+      products.vue    → /shop/products
+      cart.vue        → /shop/cart
+    auth/
+      login.vue       → /auth/login
+  ```
+
+  </template>
+
+  <template #right>
+
+  ###  after
+  ```text
+  pages/
+    (marketing)/
+      about.vue       → /about
+      contact.vue     → /contact
+    (shop)/
+      products.vue    → /products
+      cart.vue        → /cart
+    (auth)/
+      login.vue       → /login
+  ```
+
+  </template>
+
+</Row>
 
 ---
 
