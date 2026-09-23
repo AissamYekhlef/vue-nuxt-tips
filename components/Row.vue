@@ -1,4 +1,3 @@
-```vue
 <template>
   <div class="two-column">
     <div class="left">
@@ -30,4 +29,3 @@
   flex: 1;
 }
 </style>
-```
