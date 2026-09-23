@@ -240,7 +240,7 @@ your source tree without becoming part of the URL.
 
   ### before
 
-  ```text
+  ```text {1,2,3|all}
   pages/
     marketing/
       about.vue       → /marketing/about
@@ -257,7 +257,7 @@ your source tree without becoming part of the URL.
   <template #right>
 
   ###  after
-  ```text
+  ```text {1,2,3|all}
   pages/
     (marketing)/
       about.vue       → /about
